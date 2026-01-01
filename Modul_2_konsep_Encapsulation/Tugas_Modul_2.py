@@ -169,7 +169,7 @@ if __name__ == "__main__":
     # 1. Buat Perpustakaan
     perpus = Perpustakaan("Perpustakaan Teknologi")
     
-    # 2. Buat 3 Buku
+    #Buat 3 Buku
     print("\n--- BUAT 3 BUKU ---")
     buku1 = Buku("BK001", "Pemrograman Python", "Guido van Rossum", stok=5, lokasi_rak="A1")
     buku2 = Buku("BK002", "Database SQL", "Blaha Michael", stok=3, lokasi_rak="A2")
@@ -183,7 +183,7 @@ if __name__ == "__main__":
     for buku in perpus.daftar_buku:
         print(f"  {buku.info_buku()}")
     
-    # 3. Buat 2 Anggota
+    #Buat 2 Anggota
     print("\n--- BUAT 2 ANGGOTA ---")
     anggota1 = Anggota("A001", "Budi Santoso", maks_pinjam=3)
     anggota2 = Anggota("A002", "Siti Nurhaliza", maks_pinjam=2)
@@ -195,22 +195,22 @@ if __name__ == "__main__":
     for anggota in perpus.daftar_anggota:
         print(f"  {anggota.info_anggota()}")
     
-    # 4. Anggota 1 pinjam 2 buku
+    #Anggota 1 pinjam 2 buku
     print("\n--- PROSES PEMINJAMAN ---")
     print("\nAnggota 1 meminjam 2 buku:")
     peminjaman1_1 = anggota1.pinjam_buku(buku1)
     peminjaman1_2 = anggota1.pinjam_buku(buku2)
     
-    # 5. Anggota 2 pinjam 1 buku
+    #Anggota 2 pinjam 1 buku
     print("\nAnggota 2 meminjam 1 buku:")
     peminjaman2_1 = anggota2.pinjam_buku(buku3)
     
-    # 6. Stok buku setelah peminjaman
+    #Stok buku setelah peminjaman
     print("\n--- INFORMASI BUKU SETELAH PEMINJAMAN ---")
     for buku in perpus.daftar_buku:
         print(f"  {buku.info_buku()}")
     
-    # 7. Tampilkan daftar peminjaman masing-masing anggota
+    #Tampilkan daftar peminjaman masing-masing anggota
     print("\n--- DAFTAR PEMINJAMAN MASING-MASING ANGGOTA ---")
     for anggota in perpus.daftar_anggota:
         print(f"\n{anggota.nama}:")
@@ -220,7 +220,7 @@ if __name__ == "__main__":
         else:
             print("  (Tidak ada peminjaman)")
     
-    # 8. Pengembalian buku
+    #Pengembalian buku
     print("\n--- PROSES PENGEMBALIAN BUKU ---")
     print("\nAnggota 1 mengembalikan buku:")
     anggota1.kembalikan_buku(buku1.kode_buku, buku1)
@@ -228,12 +228,12 @@ if __name__ == "__main__":
     print("\nAnggota 2 mengembalikan buku:")
     anggota2.kembalikan_buku(buku3.kode_buku, buku3)
     
-    # 9. Stok buku setelah pengembalian
+    #Stok buku setelah pengembalian
     print("\n--- INFORMASI BUKU SETELAH PENGEMBALIAN ---")
     for buku in perpus.daftar_buku:
         print(f"  {buku.info_buku()}")
     
-    # 10. Tampilkan daftar peminjaman terbaru
+    # Tampilkan daftar peminjaman terbaru
     print("\n--- DAFTAR PEMINJAMAN TERBARU ---")
     for anggota in perpus.daftar_anggota:
         print(f"\n{anggota.nama}:")
